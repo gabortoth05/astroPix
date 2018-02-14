@@ -1,0 +1,25 @@
+<c:FragmentDefinition controllerName="AstroPix.view.Master"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:m="sap.m" xmlns:u="sap.ui.unified" xmlns="sap.m" 
+	xmlns:l="sap.ui.layout"
+	xmlns:c="sap.ui.core" xmlns:tnt="sap.tnt">
+	
+
+	<VBox class="sapUiLargeMarginTop">
+		<Text text="Brightness" class="sapUiLargeMarginBegin sapUiMediumMarginBottom"></Text>
+		<Slider enableTickmarks="true" value="50" range="20" min="0" max="100" liveChange="onBrightnessChange"  class="sapUiMediumMarginBottom" width="100%"/>		
+	
+		<Text text="Contrast" class="sapUiLargeMarginBegin sapUiMediumMarginBottom"></Text>
+		<Slider enableTickmarks="true" value="50" range="20" min="0" max="100" liveChange="onContrastChange"  class="sapUiMediumMarginBottom" width="100%"/>
+		
+			
+	
+		<Button text="Restore default" class="sapUiLargeMarginBegin sapUiMediumMarginTop" press="onRestore" />
+	</VBox>
+
+
+
+								
+
+	
+
+</c:FragmentDefinition>

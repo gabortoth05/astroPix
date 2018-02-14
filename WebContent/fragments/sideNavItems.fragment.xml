@@ -1,0 +1,58 @@
+<c:FragmentDefinition controllerName="AstroPix.view.Master"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:m="sap.m" xmlns:u="sap.ui.unified" xmlns="sap.m" 
+	xmlns:l="sap.ui.layout"
+	xmlns:c="sap.ui.core" xmlns:tnt="sap.tnt">
+	
+	<tnt:SideNavigation id="sideNav" expanded="false"
+					itemSelect="onItemSelect">
+	<tnt:NavigationList items="">
+<!-- 		<tnt:NavigationListItem text="Brightness" -->
+<!-- 								icon="sap-icon://lightbulb" -->
+<!-- 								enabled="true" -->
+<!-- 								expanded="false" -->
+<!-- 								select="" -->
+<!-- 								key=""> -->
+<!-- 			<tnt:NavigationListItem id="brightUp" text="Up" key="up" select="onAdjustImage"/> -->
+<!-- 			<tnt:NavigationListItem id="brightDown" text="Down" key="down" select="onAdjustImage"/> -->
+<!-- 		</tnt:NavigationListItem> -->
+<!-- 		<tnt:NavigationListItem text="Contrast" -->
+<!-- 								icon="sap-icon://example" -->
+<!-- 								enabled="true" -->
+<!-- 								expanded="false" -->
+<!-- 								select="" -->
+<!-- 								key=""> -->
+<!-- 			<tnt:NavigationListItem text="Up" key="up" select="onContrast"/> -->
+<!-- 			<tnt:NavigationListItem text="Down" key="down" select=""/> -->
+<!-- 		</tnt:NavigationListItem> -->
+		<tnt:NavigationListItem text="Greyscale"
+								icon="sap-icon://filter"
+								enabled="true"
+								expanded="false"
+								select="onGreyImage"
+								key="">
+		</tnt:NavigationListItem>
+		<tnt:NavigationListItem text="Color"
+								icon="sap-icon://palette"
+								enabled="true"
+								expanded="false"
+								select=""
+								key="">
+			<tnt:NavigationListItem text="Red" id="red" select="addColorChannel"/>
+			<tnt:NavigationListItem text="Green" id="green" select="addColorChannel"/>
+			<tnt:NavigationListItem text="Blue" id="blue" select="addColorChannel"/>
+		</tnt:NavigationListItem>
+		<tnt:NavigationListItem text="Kernel"
+								icon="sap-icon://database"
+								enabled="true"
+								expanded="false"
+								select=""
+								key="">
+		</tnt:NavigationListItem>
+	</tnt:NavigationList>
+
+</tnt:SideNavigation>
+
+
+	
+
+</c:FragmentDefinition>

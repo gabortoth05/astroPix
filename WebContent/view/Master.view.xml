@@ -1,0 +1,120 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:l="sap.ui.layout" xmlns="sap.m"
+		controllerName="AstroPix.view.Master" xmlns:tnt="sap.tnt" xmlns:custom="AstroPix.utils" xmlns:html="http://www.w3.org/1999/xhtml">
+
+	<tnt:ToolPage id="toolPage">
+		<tnt:header>
+			<tnt:ToolHeader>
+				<Button id="sideNavigationToggleButton"
+						icon="sap-icon://menu2"
+						type="Transparent"
+						press="onSideNavButtonPress">
+					<layoutData>
+						<OverflowToolbarLayoutData priority="NeverOverflow" />
+					</layoutData>
+				</Button>
+				<ToolbarSpacer width="20px" />
+				<Button text="Load Image" type="Transparent">
+					<layoutData>
+						<OverflowToolbarLayoutData priority="Low" />
+					</layoutData>
+				</Button>
+				<tnt:ToolHeaderUtilitySeparator />
+				<ToolbarSpacer>
+					<layoutData>
+						<OverflowToolbarLayoutData priority="NeverOverflow" minWidth="20px" />
+					</layoutData>
+				</ToolbarSpacer>
+				<Button text="Astro Pix" type="Transparent" press="handleUserNamePress">
+					<layoutData>
+						<OverflowToolbarLayoutData priority="NeverOverflow" />
+					</layoutData>
+				</Button>
+
+			</tnt:ToolHeader>
+		</tnt:header>
+		<tnt:sideContent>
+			<core:Fragment fragmentName="AstroPix.fragments.sideNavItems" type="XML" />
+			
+
+		</tnt:sideContent>
+		<tnt:mainContents>
+			<NavContainer id="pageContainer">
+				<pages>
+					<IconTabBar
+						id="iconTabBar"
+						expanded="{device>/isNoPhone}"
+						class="iconTab"
+						select="onBarSelect" >
+						<items>
+							<IconTabFilter text="Red channel" key="red">
+								
+								<l:FixFlex class="fixFlexHorizontal" vertical="false">
+									<l:fixContent>
+										<custom:canvasHolder channel="red" />
+									</l:fixContent>
+									<l:flexContent>
+										<core:Fragment fragmentName="AstroPix.fragments.controlPanel" type="XML" />
+									</l:flexContent>
+								</l:FixFlex>
+								
+							</IconTabFilter>
+							<IconTabFilter
+								text="Green channel" key="green">
+								
+								<l:FixFlex class="fixFlexHorizontal" vertical="false">
+									<l:fixContent>
+										<custom:canvasHolder channel="green" />
+									</l:fixContent>
+									<l:flexContent>
+										<core:Fragment fragmentName="AstroPix.fragments.controlPanel" type="XML" />
+									</l:flexContent>
+								</l:FixFlex>
+								
+							</IconTabFilter>
+							<IconTabFilter
+								text="Blue channel" key="blue">
+								
+								<l:FixFlex class="fixFlexHorizontal" vertical="false">
+									<l:fixContent>
+										<custom:canvasHolder channel="blue" />
+									</l:fixContent>
+									<l:flexContent>
+										<core:Fragment fragmentName="AstroPix.fragments.controlPanel" type="XML" />
+									</l:flexContent>
+								</l:FixFlex>
+								
+							</IconTabFilter>
+							<IconTabFilter
+								text="Screen blending" key="screenBlending">
+								
+								<l:FixFlex class="fixFlexHorizontal" vertical="false">
+									<l:fixContent>
+										<custom:canvasHolder channel="screenBlending" />
+									</l:fixContent>
+									<l:flexContent>
+										<FlexBox class="sapUiLargeMarginTop sapUiLargeMarginBegin" width="90%" alignItems="Stretch">
+											<items>
+												
+												<VBox>
+													<Title class="sapUiLargeMarginBottom" text="Get ready for the final result!" />
+													<Text class="sapUiLargeMarginBottom" text="Combine all the three color channel into one images with screen blending mode." />
+													<Button class="sapUiLargeMarginBottom" text="Start blending" press="onScreen" />
+												</VBox>
+												
+												
+											</items>
+										</FlexBox>
+														
+											
+											
+									</l:flexContent>
+								</l:FixFlex>	
+								
+							</IconTabFilter>
+						</items>
+					</IconTabBar>
+				</pages>
+			</NavContainer>
+		</tnt:mainContents>
+	</tnt:ToolPage>
+</core:View>
