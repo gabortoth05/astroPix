@@ -13,7 +13,7 @@
 		
 			
 	
-		<Button text="Restore default" class="sapUiLargeMarginBegin sapUiMediumMarginTop" press="onRestore" />
+		<Button text="Load Image / Restore default" class="sapUiLargeMarginBegin sapUiMediumMarginTop" press="onRestore" />
 	</VBox>
 
 
